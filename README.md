@@ -1,6 +1,6 @@
 # miningPoller
 
-Mining Poller will Poll ahashpool.  It loops through the wallets in wallets.data
+Mining Poller will Poll ahashpool.  It loops through the wallets in wallets.dat
 
 install the following dependencies:
 
