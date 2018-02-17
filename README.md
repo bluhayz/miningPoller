@@ -14,6 +14,5 @@ wallet, time, cleared balance, uncleared total balance, cleared usd balance, unc
 
 | Wallet     | Time    | Balance (Cleared) | Balance (Total) | USD Balance (Cleared) | USD Balance (Total) | BTC Price in USD|
 | --------|---------|-------|--------|---------|-------|----------|
-|"17QaUWVZ2vT5XbCMiQwHwCs11FMaTSk7b"|"2018-02-17 14:25:59"|"0.00347361"|"0.00433728"|"36.820266"|"45.975168"|"10600.0"|
-|"17QaUWVZ2vT5XbCMiQwHwCs11FMaTSk7b"|"2018-02-17 14:25:59"|"0.00347361"|"0.00433728"|"36.820266"|"45.975168"|"10600.0"|
-| Tuesday | chicken | $8    |
+|17Qa....k7b|2018-02-17 14:25:59|0.00347361|0.00433728|36.820266|45.975168|10600.0|
+|17Q....Mb|2018-02-17 14:25:59|0.00347361|0.00433728|36.820266|45.975168|10600.0|
