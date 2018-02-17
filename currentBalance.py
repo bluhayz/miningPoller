@@ -38,27 +38,35 @@ def pullBalanceFromWallet(wallet):
     uncleararr = re.findall(r'\d+\.\d+', unclearedval)
     return balancearr[0], uncleararr[0]
 
-wallet = "17QaUWVZ2uGnXbCMiQwHwCs11FMaTSk7a"
-balance, unclearbal = pullBalanceFromWallet(wallet)
+def readWallets():
+    with open('wallets.dat', 'r') as mywallets:
+        wallets = mywallets.read().splitlines()
+    return wallets
 
-#Calculate dollar values based off current price at time of poll
-totalearned = float(balance) * float(btc)
-totaluncleared = float(unclearbal) * float(btc)
+wallets = readWallets()
+print wallets
 
-#print "Total earned: " + str(totalearned)
+for wallet in wallets:
+    balance, unclearbal = pullBalanceFromWallet(wallet)
 
-#create output for the csv file to store the data
-mylist =[]
-mylist.append(wallet)
-mylist.append(time)
-mylist.append(str(balance))
-mylist.append(str(unclearbal))
-mylist.append(totalearned)
-mylist.append(totaluncleared)
-mylist.append(str(btc))
+    #Calculate dollar values based off current price at time of poll
+    totalearned = float(balance) * float(btc)
+    totaluncleared = float(unclearbal) * float(btc)
 
-print mylist
+    #print "Total earned: " + str(totalearned)
 
-with open('currentbalance.csv', 'a') as myfile:
-    wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
-    wr.writerow(mylist)
+    #create output for the csv file to store the data
+    mylist =[]
+    mylist.append(wallet)
+    mylist.append(time)
+    mylist.append(str(balance))
+    mylist.append(str(unclearbal))
+    mylist.append(totalearned)
+    mylist.append(totaluncleared)
+    mylist.append(str(btc))
+
+    print mylist
+
+    with open('currentbalance.csv', 'a') as myfile:
+        wr = csv.writer(myfile, quoting=csv.QUOTE_ALL)
+        wr.writerow(mylist)
